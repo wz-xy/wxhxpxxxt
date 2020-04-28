@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易制爆危险化学品信息系统</title>
+    <link rel="stylesheet" href="style/css/index.css"/>
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script src="./style/js/echarts.min.js"></script>
+    <script src="./style/js/echarts-liquidfill.min.js"></script>
+    <script src="./style/js/jquery.liMarquee.js"></script>
+    <script src="./style/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headleft">
+            <div class="top">易制爆危险化学品信息系统（从业单位）</div>
+            <div class="bot">
+                hongchengkun ｜  <span>有效期至：2020-05-01</span>
+            </div>
+        </div>
+        <div class="headright">
+            <ul>
+                <li>
+                    <a href="#" class="flfg"></a>
+                </li>
+                <li>
+                    <a href="#" class="yjbj">
+                        <span class="redicon"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="tztg"></a>
+                </li>
+                <li>
+                    <a href="#" class="home"></a>
+                </li>
+                <li>
+                    <a href="#" class="layout"></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="topart">
+            <div class="ptleft h910 f-l">
+                <div class="h910 secpart">
+                    <div>
+                        <div class="borin">
+                            <span></span>
+                        </div>
+                        <div class="hline">
+                            <h3>业务功能</h3>
+                            <a href="#">更多></a>
+                        </div>
+                        <ul class="iconlist">
+                            <li>
+                                <img src="./style/img/index/dwba.png" />
+                                <span>单位备案</span>
+                            </li>
+                            <li>
+                                <img src="./style/img/index/ryba.png" />
+                                <span>人员备案</span>
+                            </li>
+                            <li>
+                                <img src="./style/img/index/cccs.png" />
+                                <span>储存场所备案</span>
+                            </li>
+                            <li>
+                                <img src="./style/img/index/wycl.png" />
+                                <span>危运车辆备案</span>
+                            </li>
+                            <li>
+                                <img src="./style/img/index/aqjc.png" />
+                                <span>安全检查自查</span>
+                            </li>
+                        </ul>
+                        <div class="titlenor">
+                            五天备案统计
+                        </div>
+                        <div class="allhuan">
+                            <ul>
+                                <li>
+                                    <div class="circle1 circle">
+                                        <div class="circle-bar circle-green">
+                                            <div class="circle-bar-left"></div>
+                                            <div class="circle-bar-right" style="transform: rotate(180deg);"></div>
+                                            <!-- 遮罩层，显示百分比 -->
+                                            <div class="mask">
+                                                <span class="percent">50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span>今天昨天销售量环比增长</span>
+                                </li>
+                                <li>
+                                    <div class="circle1 circle">
+                                        <div class="circle-bar circle-red">
+                                            <div class="circle-bar-left"></div>
+                                            <div class="circle-bar-right" style="transform: rotate(180deg);"></div>
+                                            <!-- 遮罩层，显示百分比 -->
+                                            <div class="mask">
+                                                <span class="percent">50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span>本月上月销售量环比增长</span>
+                                </li>
+                                <li>
+                                    <div class="circle1 circle">
+                                        <div class="circle-bar circle-blue">
+                                            <div class="circle-bar-left"></div>
+                                            <div class="circle-bar-right" style="transform: rotate(180deg);"></div>
+                                            <!-- 遮罩层，显示百分比 -->
+                                            <div class="mask">
+                                                <span class="percent">50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span>近半年台账数同比</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="leftbor">近半年台账数统计</p>
+                        <div id="table1"  class="h210"></div>
+                        <div class="titlenor">
+                            流向信息
+                            <ul>
+                                <li>今</li>
+                                <li>月</li>
+                                <li>季</li>
+                                <li>年</li>
+                            </ul>
+                        </div>
+                        <div class="lxlist">
+                            <div class="llpart">
+                                <div>
+                                    <p class="topblue">生产量<span>(千克)</span></p>
+                                    <span class="botnum">1000</span>
+                                </div>
+                            </div>
+                            <div class="llpart">
+                                <div>
+                                    <p class="topblue">使用量<span>(千克)</span></p>
+                                    <span class="botnum">1000</span>
+                                </div>
+                            </div>
+                            <div class="llpart">
+                                <div>
+                                    <p class="topblue">购销量<span>(千克)</span></p>
+                                    <span class="botnum">1000</span>
+                                </div>
+                            </div>
+                            <div class="llpart">
+                                <div>
+                                    <p class="topblue">运输量<span>(千克)</span></p>
+                                    <span class="botnum">1000</span>
+                                </div>
+                            </div>
+                            <div class="llpart">
+                                <div>
+                                    <p class="topblue">储存量<span>(千克)</span></p>
+                                    <span class="botnum">1000</span>
+                                </div>
+                            </div>
+                            <div class="llpart">
+                                <div>
+                                    <p class="topblue">处置量<span>(千克)</span></p>
+                                    <span class="botnum">1000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ptmid h910 f-l">
+                <div class="h910" id="table6"></div>
+            </div>
+            <div class="ptright h910 f-l">
+                <div class="h910 secpart">
+                    <div>
+                        <div class="borin">
+                            <span></span>
+                        </div>
+                        <div class="hline">
+                            <h3>治安防范</h3>
+                        </div>
+                        <div class="titlenor">
+                            值班室
+                        </div>
+                        <div class="llpart llpartl">
+                            <div>
+                                <p class="topblue">出入口控制</p>
+                                <dl>
+                                    <dt>1000</dt>
+                                    <dd>
+                                        <p>980</p>
+                                        <span class="green">在线</span>
+                                    </dd>
+                                    <dd>
+                                        <p>20</p>
+                                        <span class="red">离线</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="llpart llpartr">
+                            <div>
+                                <p class="topblue">信息采集</p>
+                                <dl class="pic">
+                                    <dd>
+                                        <p class="picman"></p>
+                                        <p>980</p>
+                                        <span class="blue">人流量</span>
+                                    </dd>
+                                    <dd>
+                                        <p class="piccar"></p>
+                                        <p>20</p>
+                                        <span class="blue">车流量</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="titlenor">
+                            监控中心
+                        </div>
+                        <div class="llpart llpartl">
+                            <div>
+                                <p class="topblue">视频监控</p>
+                                <dl>
+                                    <dt>1000</dt>
+                                    <dd>
+                                        <p>980</p>
+                                        <span class="green">在线</span>
+                                    </dd>
+                                    <dd>
+                                        <p>20</p>
+                                        <span class="red">离线</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="llpart llpartr">
+                            <div>
+                                <p class="topblue">出入口控制</p>
+                                <div class="special">
+                                    <div class="spel">
+                                        <p class="picman"></p>
+                                        <p class="num">20</p>
+                                        <span class="blue">人流量</span>
+                                    </div>
+                                    <div class="sper">
+                                        <dl>
+                                            <dt>1000</dt>
+                                            <dd>
+                                                <p>980</p>
+                                                <span class="green">在线</span>
+                                            </dd>
+                                            <dd>
+                                                <p>20</p>
+                                                <span class="red">离线</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="titlenor">
+                            储存场所
+                        </div>
+                        <div class="llpart llpartin">
+                            <div class="apart">
+                                <p class="topblue">出入口控制</p>
+                                <div class="allpart">
+                                    <div class="alpl">
+                                        <dl>
+                                            <dt>1000</dt>
+                                            <dd>
+                                                <p>980</p>
+                                                <span class="green">在线</span>
+                                            </dd>
+                                            <dd>
+                                                <p>20</p>
+                                                <span class="red">离线</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="alpr">
+                                        <dl class="pic">
+                                            <dd>
+                                                <p class="picman"></p>
+                                                <p>980</p>
+                                                <span class="blue">人流量</span>
+                                            </dd>
+                                            <dd>
+                                                <p class="piccar"></p>
+                                                <p>20</p>
+                                                <span class="blue">车流量</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="llpart llpartl nomar">
+                            <div>
+                                <p class="topblue">电子巡查</p>
+                                <dl>
+                                    <dt>
+                                        <p class="picwz"></p>
+                                        <p class="picxgs"></p>
+                                    </dt>
+                                    <dd>
+                                        <p>980</p>
+                                        <span class="green">在线</span>
+                                    </dd>
+                                    <dd>
+                                        <p>20</p>
+                                        <span class="red">离线</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="llpart llpartr">
+                            <div>
+                                <p class="topblue">入侵报警</p>
+                                <div class="special">
+                                    
+                                    <div class="sper">
+                                        <dl>
+                                            <dt>1000</dt>
+                                            <dd>
+                                                <p>980</p>
+                                                <span class="green">在线</span>
+                                            </dd>
+                                            <dd>
+                                                <p>20</p>
+                                                <span class="red">离线</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="spel bor-l">
+                                        <p class="picbjs"></p>
+                                        <p class="num">20/99</p>
+                                        <span class="red">报警数</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="botpart">
+            <div class="fp">
+                <div class="h430">
+                    <div>
+                        <div class="borin">
+                            <span></span>
+                        </div>
+                        <div class="titlenor">
+                            数据上报
+                        </div>
+                        <div class="h270" id="table2"></div>
+                        <div class="listauto">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <span class="fh">◇</span>
+                                        <a href="#">销售出库相关数据已上报</a>
+                                        <span class="date">2020-4-17</span>
+                                    </li>
+                                    <li>
+                                        <span class="fh">◇</span>
+                                        <a href="#">销售出库相关数据已上报</a>
+                                        <span class="date">2020-4-17</span>
+                                    </li>
+                                    <li>
+                                        <span class="fh">◇</span>
+                                        <a href="#">销售出库相关数据已上报</a>
+                                        <span class="date">2020-4-17</span>
+                                    </li>
+                                    <li>
+                                        <span class="fh">◇</span>
+                                        <a href="#">销售出库相关数据已上报</a>
+                                        <span class="date">2020-4-17</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fp">
+                <div class="h430">
+                    <div>
+                        <div class="borin">
+                            <span></span>
+                        </div>
+                        <div class="titlenor">
+                            数据接口
+                        </div>
+                        <div class="h380" id="table3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fp">
+                <div class="h430">
+                    <div>
+                        <div class="borin">
+                            <span></span>
+                        </div>
+                        <div class="titlenor">
+                            培训教育
+                        </div>
+                        <div class="listul">
+                            <ul>
+                                <li>
+                                    <p>1000</p>
+                                    <span class="bluet">应培训人数</span>
+                                </li>
+                                <li>
+                                    <p>50</p>
+                                    <span class="greent">已培训人数</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="h270" id="table4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fp">
+                <div class="h430">
+                    <div>
+                        <div class="borin">
+                            <span></span>
+                        </div>
+                        <div class="titlenor">
+                            标识管理
+                        </div>
+                        <div class="listul">
+                            <ul>
+                                <li>
+                                    <p>1000</p>
+                                    <span class="bluet">标识总数</span>
+                                </li>
+                                <li>
+                                    <p>50</p>
+                                    <span class="greent">已使用数</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="titlenor">
+                            使用情况
+                        </div>
+                        <div class="h220" id="table5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
