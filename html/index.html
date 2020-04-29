@@ -9,6 +9,7 @@
     <script src="./style/js/echarts.min.js"></script>
     <script src="./style/js/echarts-liquidfill.min.js"></script>
     <script src="./style/js/jquery.liMarquee.js"></script>
+    <script src="./style/js/jquery.jDiaporama.js"></script>
     <script src="./style/js/index.js"></script>
 </head>
 <body>
@@ -51,30 +52,80 @@
                         </div>
                         <div class="hline">
                             <h3>业务功能</h3>
-                            <a href="#">更多></a>
+                            <a href="#" class="more">更多></a>
+                            <div class="slide">
+                                <div>
+                                    <div class="borin">
+                                        <span></span>
+                                    </div>
+                                    <ul class="iconlist">
+                                        <li>
+                                            <a href="#">
+                                                <img src="./style/img/index/dwba.png" />
+                                                <span>单位备案</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./style/img/index/ryba.png" />
+                                                <span>人员备案</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./style/img/index/cccs.png" />
+                                                <span>储存场所备案</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./style/img/index/wycl.png" />
+                                                <span>危运车辆备案</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./style/img/index/aqjc.png" />
+                                                <span>安全检查自查</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <ul class="iconlist">
                             <li>
-                                <img src="./style/img/index/dwba.png" />
-                                <span>单位备案</span>
+                                <a href="#">
+                                    <img src="./style/img/index/dwba.png" />
+                                    <span>单位备案</span>
+                                </a>
                             </li>
                             <li>
-                                <img src="./style/img/index/ryba.png" />
-                                <span>人员备案</span>
+                                <a href="#">
+                                    <img src="./style/img/index/ryba.png" />
+                                    <span>人员备案</span>
+                                </a>
                             </li>
                             <li>
-                                <img src="./style/img/index/cccs.png" />
-                                <span>储存场所备案</span>
+                                <a href="#">
+                                    <img src="./style/img/index/cccs.png" />
+                                    <span>储存场所备案</span>
+                                </a>
                             </li>
                             <li>
-                                <img src="./style/img/index/wycl.png" />
-                                <span>危运车辆备案</span>
+                                <a href="#">
+                                    <img src="./style/img/index/wycl.png" />
+                                    <span>危运车辆备案</span>
+                                </a>
                             </li>
                             <li>
-                                <img src="./style/img/index/aqjc.png" />
-                                <span>安全检查自查</span>
+                                <a href="#">
+                                    <img src="./style/img/index/aqjc.png" />
+                                    <span>安全检查自查</span>
+                                </a>
                             </li>
                         </ul>
+                       
                         <div class="titlenor">
                             五天备案统计
                         </div>
@@ -174,7 +225,7 @@
                 </div>
             </div>
             <div class="ptmid h910 f-l">
-                <div class="h910" id="table6"></div>
+                <div class="h910" id="map"></div>
             </div>
             <div class="ptright h910 f-l">
                 <div class="h910 secpart">
@@ -425,7 +476,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="h270" id="table4"></div>
+                        <div class="tablelist">
+                            <ul class="index-diaporama">
+                                <li><div class="h270" id="table4"></div></li>
+                                <li><div class="h270" id="table5"></div></li>
+                                <li><div class="h270" id="table6"></div></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -453,7 +510,7 @@
                         <div class="titlenor">
                             使用情况
                         </div>
-                        <div class="h220" id="table5"></div>
+                        <div class="h220" id="table7"></div>
                     </div>
                 </div>
             </div>
