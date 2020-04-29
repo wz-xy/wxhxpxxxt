@@ -86,6 +86,16 @@ section .allhuan{}
 section .allhuan ul{}
 section .allhuan ul li{float:left;width:33.33%;text-align: center;}
 section .allhuan ul li span{display:inline-block;padding:0 15px;color:#00f0ff;font-size:12px;}
+section .floatul{position:absolute;top:60px;left:0px;width:100%;}
+section .floatul ul{padding:0 25px;overflow:hidden;text-align: center;}
+section .floatul ul li{float:left;width:25%;}
+section .floatul ul li p{height:60px;line-height: 60px;margin-top:25px;color:#fff;}
+section .floatul ul li span{display:block;height:30px;line-height:30px;font-size:12px;margin-top:10px;}
+section .floatul ul li.cloblue{color:#00f0ff}
+section .floatul ul li.cloyel{color:#ffd928}
+section .floatul ul li.clordblue{color:#4d82fa}
+section .floatul ul li.clorgreen{color:#23ec8a}
+section .floatul ul li.clorred{color:#ff5d5d}
 /***圆环***/
 /*支持IE9及以上*/
 .circle{display:block; margin:0 15px;}

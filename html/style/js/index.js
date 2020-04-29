@@ -113,90 +113,167 @@ $(function(){
             },
             series: [{
                     type: 'liquidFill',
-                    radius: '33%',
-                    color: ['#195ba6'],
-                    center: ['15%', '25%'],
+                    radius: '25%',
+                    color: ['#00f0ff'],
+                    center: ['14%', '20%'],
                     data: [0.4544, 0.4544, 0.4544, 0.4544, 0.4544],
                     backgroundStyle: {
                         borderWidth: 2,
-                        borderColor: '#1789fb',
-                        color: '#1c233f',
+                        borderColor: '#00f0ff',
+                        color: 'rgba(0,0,0,0)',
                     },
                     outline: {
                         itemStyle: {
                             borderWidth: 5,
-                            borderColor: '#1789fb',
+                            borderColor: '#00f0ff',
                             borderType: 'dashed',
                         }
                     },
                     label: {
-                        normal: { //此处没有生效，本地生效
-                            textStyle: {
-                                fontSize:12,
-                                color: '#e6e6e6',
-                                fontWeight: '20'
-                            },
-                        },
+                        formatter:'',
+                        fontSize:12,
                     },
                 },
                 {
         
                     type: 'liquidFill',
-                    radius: '33%',
-                    color: ['#884046'],
-                    center: ['48%', '25%'],
+                    radius: '25%',
+                    color: ['#ffd928'],
+                    center: ['38%', '20%'],
                     data: [0.6, 0.6, 0.6, 0.6, 0.6],
                     backgroundStyle: {
                         borderWidth: 2,
-                        borderColor: '#eb5c4d',
-                        color: '#1c233f',
+                        borderColor: '#ffd928',
+                        color: 'rgba(0,0,0,0)',
                     },
                     outline: {
                         itemStyle: {
                             borderWidth: 5,
-                            borderColor: '#eb5c4d',
+                            borderColor: '#ffd928',
                             borderType: 'dashed',
                         }
                     },
                     label: {
-                        normal: { // 同上
-                            textStyle: {
-                                fontSize: 12,
-                                color: '#e6e6e6',
-                            },
-                        },
+                        formatter:'',
+                        fontSize:12,
                     },
         
                 },
                 {
-        
                     type: 'liquidFill',
-                    radius: '33%',
-                    color: ['#8a7e4e'],
-                    center: ['80%', '25%'],
-                    data: [1, 1, 1, 1, 1],
+                    radius: '25%',
+                    color: ['#4d82fa'],
+                    center: ['62%', '20%'],
+                    data: [0.45, 0.45, 0.45, 0.45, 0.45],
                     backgroundStyle: {
                         borderWidth: 2,
-                        borderColor: '#f0d25c',
-                        color: '#1c233f',
+                        borderColor: '#4d82fa',
+                        color: 'rgba(0,0,0,0)',
                     },
                     outline: {
                         itemStyle: {
                             borderWidth: 5,
-                            borderColor: '#f0d25c',
+                            borderColor: '#4d82fa',
                             borderType: 'dashed',
                         }
                     },
                     label: {
-                        normal: {
-                            textStyle: {
-                                color: '#e6e6e6',
-                                fontSize: 12
+                        formatter:'',
+                        fontSize: 12
+                    }
+                },
+                {
+                    type: 'liquidFill',
+                    radius: '25%',
+                    color: ['#23ec8a'],
+                    center: ['86%', '20%'],
+                    data: [1, 1, 1, 1, 1],
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#23ec8a',
+                        color: 'rgba(0,0,0,0)',
+                    },
+                    outline: {
+                        itemStyle: {
+                            borderWidth: 5,
+                            borderColor: '#23ec8a',
+                            borderType: 'dashed',
                         }
                     },
-        
+                    label: {
+                        formatter:'',
+                        fontSize: 12
+                    }
+                },
+                {
+                    type: 'liquidFill',
+                    radius: '25%',
+                    color: ['#ff5d5d'],
+                    center: ['14%', '65%'],
+                    data: [0.45, 0.45, 0.45, 0.45, 0.45],
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#ff5d5d',
+                        color: 'rgba(0,0,0,0)',
+                    },
+                    outline: {
+                        itemStyle: {
+                            borderWidth: 5,
+                            borderColor: '#ff5d5d',
+                            borderType: 'dashed',
+                        }
+                    },
+                    label: {
+                        formatter:'',
+                        fontSize: 12
+                    }
+                },
+                {
+                    type: 'liquidFill',
+                    radius: '25%',
+                    color: ['#23ec8a'],
+                    center: ['38%', '65%'],
+                    data: [0.45, 0.45, 0.45, 0.45, 0.45],
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#23ec8a',
+                        color: 'rgba(0,0,0,0)',
+                    },
+                    outline: {
+                        itemStyle: {
+                            borderWidth: 5,
+                            borderColor: '#23ec8a',
+                            borderType: 'dashed',
+                        }
+                    },
+                    label: {
+                        formatter:'',
+                        fontSize: 12
+                    }
+                },
+                {
+                    type: 'liquidFill',
+                    radius: '25%',
+                    color: ['#ffd928'],
+                    center: ['62%', '65%'],
+                    data: [0.45, 0.45, 0.45, 0.45, 0.45],
+                    backgroundStyle: {
+                        borderWidth: 2,
+                        borderColor: '#ffd928',
+                        color: 'rgba(0,0,0,0)',
+                    },
+                    outline: {
+                        itemStyle: {
+                            borderWidth: 5,
+                            borderColor: '#ffd928',
+                            borderType: 'dashed',
+                        }
+                    },
+                    label: {
+                        formatter:'',
+                        fontSize: 12
+                    }
                 }
-            }
             ]
         };
         if (option && typeof option === "object") {
@@ -1565,7 +1642,7 @@ $(function(){
                     },
                     label: {
                         normal: {
-                            show: true,
+                            show: false,
                             position: 'right',
                             formatter: '{b}',
                             textStyle:{
@@ -1583,6 +1660,7 @@ $(function(){
                     showEffectOn: 'render',
                     itemStyle: {
                         normal: {
+                            show:false,
                             color: '#a6dff0'
                         }
                     },
