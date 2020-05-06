@@ -63,10 +63,13 @@ header .headright ul li a.layout{background:url(../img/index/layout.png) no-repe
 section{}
 section .topart{height:920px;padding:18px;}
 section .topart .ptleft{width:25%;}
-section .topart .ptmid{width:50%;}
+section .topart .ptmid{position:relative;width:60%;margin:0 -5%;}
+section .topart .ptmid .iconlist{position:absolute;bottom:0px;left:10%;width:560px;height:60px}
+section .topart .ptmid .iconlist li{float:left;width:140px;height:25px;margin-bottom:10px;line-height: 25px;color:#25deef;text-align: left;}
+section .topart .ptmid .iconlist li img{float:left;width:25px;margin-right:10px;}
 section .topart .ptright{width:25%;}
 section .secpart{position: relative;;padding:0 14px;}
-section .secpart>div{position: relative;height:100%;padding:0 18px;background:rgba(0,54,66,0.8);border:1px solid #0f8da5;}
+section .secpart>div{position: relative;height:100%;padding:0 18px;background:rgba(0,54,66,0.8);border:1px solid #0f8da5;z-index: 99;}
 section .secpart>div>div{z-index:10;}
 section .secpart>div>div.borin{z-index:-1;}
 section .borin{}
@@ -178,6 +181,7 @@ section .listul ul li p{color:#eaf8fa;font-size:26px;}
 section .listul ul li span{font-size:14px;}
 section .listul ul li span.bluet{color:#00f0ff;}
 section .listul ul li span.greent{color:#50ed9e;}
+section .jDiaporama_controls a{display:none;text-indent:-9999999999px;}
 section .slide{position:relative;top:-2px;left:0px;display:none;}
 section .slide>div{position:relative;;min-height: 822px;border:1px solid #0f8da5;background:rgba(5,93,115,0.97);overflow: hidden;z-index: 999;}
 section .slide .iconlist{height:auto;margin:30px 10px 0px;text-align: center;overflow: hidden;}
@@ -187,7 +191,8 @@ section .slide .iconlist li img{display:block;width:70%;margin:0 auto 10px;}
 section .slide .iconlist li span{display:block;line-height: 20px;}
 section .secpart>div>div.h210{z-index: 1;}
 /*多个切换*/
-.tablelist .jDiaporama_status{ position:absolute; right:-50%; bottom:12px; width:100%;}
+.jDiaporama{position:relative;}
+.tablelist .jDiaporama_status{ position:absolute; left:50%; bottom:0px; width:100%;margin-left:-20px !important;}
 .tablelist .jDiaporama_status a{ float:inherit; display:inline-block !important; width:8px; height:8px; margin-right:8px; text-indent:-9999px; border-radius:50%; background:rgba(255,255,255,0.5)}
 .tablelist .jDiaporama_status a.active{ width:20px !important; border-radius:8px; background:rgba(255,255,255,0.7)}
 .tablelist .jDiaporama_status a:hover{ background:rgba(255,255,255,1)}

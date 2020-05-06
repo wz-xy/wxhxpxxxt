@@ -980,7 +980,6 @@ $(function(){
     //化学品分析-流向追踪
     map()
     function map(){
-        console.log("map")
         var dom = document.getElementById("map");
         var myChart = echarts.init(dom);
         $(window).resize(function(){
@@ -988,6 +987,69 @@ $(function(){
         });
         var uploadedDataURL = "./style/js/china.json";
         var planePath='path://path://M 177.667,353.596 252.104,249.191 327,353.596 252.104,304 Z'; 
+        var dataTemp = [
+            {
+                lng: "117.000923",
+                num: 10,
+                time: "2020-03-19 08",
+                stationname: "山东",
+                lat: "36.675807"
+            },
+            {
+                lng: "115.48333",
+                num: 65,
+                time: "2020-03-19 08",
+                stationname: "河北",
+                lat: "38.03333"
+            },
+            {
+                lng: "108.95000",
+                num: 120,
+                time: "2020-03-19 08",
+                stationname: "陕西",
+                lat: "34.26667"
+            },
+            {
+                lng: "121.84661500",
+                num: 165,
+                time: "2020-03-19 08",
+                stationname: "环保大楼（北仑）",
+                lat: "29.91421000"
+            },
+            {
+                lng: "113.00000",
+                num: 230,
+                time: "2020-03-19 08",
+                stationname: "湖南",
+                lat: "28.21667"
+            },
+            {
+                lng: "113.23333",
+                num: 80,
+                time: "2020-03-19 08",
+                stationname: "广东",
+                lat: "23.16667"
+            },
+    ];
+        function addImage(url, params, api, realData){
+            return  {
+                type: 'image',
+        
+                style: {
+                    image: url,
+                    x: api.coord([
+                        realData[params.dataIndex].lng, realData[params.dataIndex]
+                            .lat
+                    ])[0],
+                    y: api.coord([
+                        realData[params.dataIndex].lng, realData[params.dataIndex].lat
+                    ])[1]-55,
+                    width: 30,
+                    height: 60,
+                }
+            }
+        }
+
 
         $.get(uploadedDataURL, function(geoJson) {
             console.log(12)
@@ -1387,155 +1449,190 @@ $(function(){
             },
             {
                 name: '北京',
-                value: 54
+                value: 54,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '天津',
-                value: 13
+                value: 13,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '上海',
-                value: 40
+                value: 40,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '重庆',
-                value: 75
+                value: 75,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '河北',
-                value: 13
+                value: 13,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '河南',
-                value: 83
+                value: 83,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '云南',
-                value: 11
+                value: 11,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '辽宁',
-                value: 19
+                value: 19,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '黑龙江',
-                value: 15
+                value: 15,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '湖南',
-                value: 69
+                value: 69,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '安徽',
-                value: 60
+                value: 60,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '山东',
-                value: 39
+                value: 39,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '新疆',
-                value: 4
+                value: 4,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '江苏',
-                value: 31
+                value: 31,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '浙江',
-                value: 104
+                value: 104,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '江西',
-                value: 36
+                value: 36,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '湖北',
-                value: 1052
+                value: 1052,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '广西',
-                value: 33
+                value: 33,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '甘肃',
-                value: 7
+                value: 7,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '山西',
-                value: 9
+                value: 9,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '内蒙古',
-                value: 7
+                value: 7,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '陕西',
-                value: 22
+                value: 22,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '吉林',
-                value: 4
+                value: 4,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '福建',
-                value: 18
+                value: 18,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '贵州',
-                value: 5
+                value: 5,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '广东',
-                value: 98
+                value: 98,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '青海',
-                value: 1
+                value: 1,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '西藏',
-                value: 0
+                value: 0,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '四川',
-                value: 44
+                value: 44,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '宁夏',
-                value: 4
+                value: 4,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '海南',
-                value: 22
+                value: 22,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '台湾',
-                value: 3
+                value: 3,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '香港',
-                value: 5
+                value: 5,
+                company:"广州中爆数字信息科技股份有限公司"
             },
             {
                 name: '澳门',
-                value: 5
+                value: 5,
+                company:"广州中爆数字信息科技股份有限公司"
             }
             ];
+
             var option = {
                 yAxis:{show:false},
                 xAxis:{show:false},
                 dataZoom:{show:false},
-                tooltip:{
-                    show:false,
-                    trigger: 'item',
-                    formatter: function (params) {
-                        return myformatter(params);
-                    },
-                    textStyle : {
-                        align : 'left'
-                    }
-                },
+                // tooltip:{
+                //     show:false,
+                //     trigger: 'item',
+                //     formatter: function (params) {
+                //         return myformatter(params);
+                //     },
+                //     textStyle : {
+                //         align : 'left'
+                //     }
+                // },
                 toolbox: {
                     show:false,
                     feature: {
@@ -1554,15 +1651,33 @@ $(function(){
                 },
                  tooltip: {
                     triggerOn: "click",
-                    formatter: function(e, t, n) {
-                        return .5 == e.value ? e.name + "：有疑似病例" : e.seriesName + "<br />" + e.name + "：" + e.value
+                    trigger: 'item',
+                    formatter: function(params) {
+                        console.log(params)
+                        var tipHtml = '';
+                        tipHtml = '<div style="width:380px;height:180px;background:rgba(5,93,115,0.8);border:1px solid rgba(18,173,204,1)">'
+                        +'<div style="width:100%;height:40px;line-height:40px;padding:0 20px">'
+                        +'<span style="color:#fff;font-size:16px;">'+params.data.company+'</span>'+'</div>'
+                        +'<div style="padding-left:20px">'
+                        +'<ul><li style="float:left;widt:65px;height:20px;line-height:20px;background:#00d9e4;border-radius:4px;color:#fff;margin-right:5px">购买客户</li><li style="float:left;widt:65px;height:20px;line-height:20px;background:#cfbb17;border-radius:4px;color:#fff;">销售客户</li></ul>'
+                        +'</div>'
+                        +'<div style="padding:20px">'
+                        +'<p style="color:#00f0ff;font-size:12px;">'
+                        +'交易物品：'+'<span style="color:#fff;margin:0 6px;">'+'硝酸、高氯酸钾、氯酸钾、硝酸钾、硝酸镁、硝酸银'+'</span></p>'
+                        +'<p style="color:#00f0ff;font-size:12px;">'
+                        +'最近交易日期：'+'<span style="color:#fff;margin:0 6px;">'+'2020-04-17'+'</span></p>'
+                        +'<p style="color:#00f0ff;font-size:12px;">'
+                        +'单位地址：'+'<span style="color:#fff;margin:0 6px;">'+'广东省广州市黄埔区萝岗万达广场开创大道'+'<br />'+'2707号B1座17楼'+'</span></p>'
+                        +'</div>'+'</div>';
+                        return tipHtml;
                     }
                 },
                 visualMap: {
                     min: 0,
                     max: 1000,
-                    left: 26,
-                    bottom: 40,
+                    left:100,
+                    bottom:80,
+                    padding: [0, 5],
                     showLabel: !0,
                     textStyle:{
                         color:'#fff'
@@ -1588,7 +1703,7 @@ $(function(){
                         color: "#0d83c7"
                     }, {
                         value: 0,
-                        color: "#ffffff"
+                        color: "#0d83c7"
                     }],
                     show: true
                 },
@@ -1596,7 +1711,7 @@ $(function(){
                     map: '全国',
                     zoom:1.1,
                     roam: true,
-                    scaleLimit:{min:1,max:3}, 
+                    scaleLimit:{min:1,max:10}, 
                     scaleLimit: {
                         min: 1,
                         max: 2
@@ -1605,19 +1720,19 @@ $(function(){
                     top: 120,
                     label: {
                         normal: {
-                            show: !0,
-                            fontSize: "14",
-                            color: "rgba(0,0,0,0.7)"
+                            show:true,
+                            fontSize: "16",
+                            color: "rgba(200,200,200,0.7)"
                         }
                     },
                     itemStyle: {
                         normal: {
                             //shadowBlur: 50,
                             //shadowColor: 'rgba(0, 0, 0, 0.2)',
-                            borderColor: "rgba(0, 0, 0, 0.2)"
+                            borderColor: "rgba(200, 200, 200, 0.2)"
                         },
                         emphasis: {
-                            areaColor: "#f2d5ad",
+                            areaColor: "#096ba3",
                             shadowOffsetX: 0,
                             shadowOffsetY: 0,
                             borderWidth: 0
@@ -1625,11 +1740,11 @@ $(function(){
                     }
                 },
                 series: [{
-                    name: "确诊病例",
+                    name: "",
                     type: "map",
                     geoIndex: 0,
-                    data: dataList
-                },
+                    data: dataList,
+                },  
                 {
                     name: '地点',
                     type: 'effectScatter',
@@ -1665,7 +1780,8 @@ $(function(){
                         }
                     },
                     data: allData.citys
-                }, {
+                },
+                 {
                     name: '线路',
                     type: 'lines',
                     coordinateSystem: 'geo',
@@ -1687,7 +1803,34 @@ $(function(){
                         }
                     },
                     data: allData.moveLines
-                }]
+                },
+                {
+                    name: '地图',
+                    type: 'custom',
+                    coordinateSystem: 'geo',
+                    markPoint:{
+
+                    },
+                    renderItem: function (params,api) {//具体实现自定义图标的方法
+                        console.log(api)
+                        if (dataTemp[params.dataIndex].num > 0  &&  dataTemp[params.dataIndex].num <= 50) {
+                            return addImage("style/img/index/xgdct.png", params, api, dataTemp);
+                        } else if (dataTemp[params.dataIndex].num > 50  &&  dataTemp[params.dataIndex].num <= 100) {
+                            return addImage("style/img/index/zbsct.png", params, api, dataTemp)
+                        } else if (dataTemp[params.dataIndex].num > 100  &&  dataTemp[params.dataIndex].num <= 150) {
+                            return addImage("style/img/index/wyclct.png", params, api, dataTemp)
+                        } else if (dataTemp[params.dataIndex].num > 150  &&  dataTemp[params.dataIndex].num <= 200) {
+                            return addImage("style/img/index/jkzxct.png", params, api, dataTemp)
+                        } else if (dataTemp[params.dataIndex].num > 200  &&  dataTemp[params.dataIndex].num <= 250) {
+                            return addImage("style/img/index/cccsct.png", params, api, dataTemp)
+                        } else {
+                            return addImage("style/img/index/xgdct.png", params, api, dataTemp)
+                        }
+                    },
+                    data: dataTemp
+                   
+                }
+                ]
             };
             myChart.setOption(option);
         });
@@ -1702,7 +1845,7 @@ $(function(){
     setTimeout(function(){
         //幻灯片
         $(".index-diaporama").jDiaporama({
-            delay: 3,   // 延迟时间为3秒
+            delay: 5,   // 延迟时间为3秒
             infos: false, //标题显示
         });
     })
