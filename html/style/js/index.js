@@ -209,7 +209,7 @@ $(function(){
                     type: 'liquidFill',
                     radius: '25%',
                     color: ['#ff5d5d'],
-                    center: ['14%', '65%'],
+                    center: ['14%', '60%'],
                     data: [0.45, 0.45, 0.45, 0.45, 0.45],
                     backgroundStyle: {
                         borderWidth: 2,
@@ -232,7 +232,7 @@ $(function(){
                     type: 'liquidFill',
                     radius: '25%',
                     color: ['#23ec8a'],
-                    center: ['38%', '65%'],
+                    center: ['38%', '60%'],
                     data: [0.45, 0.45, 0.45, 0.45, 0.45],
                     backgroundStyle: {
                         borderWidth: 2,
@@ -255,7 +255,7 @@ $(function(){
                     type: 'liquidFill',
                     radius: '25%',
                     color: ['#ffd928'],
-                    center: ['62%', '65%'],
+                    center: ['62%', '60%'],
                     data: [0.45, 0.45, 0.45, 0.45, 0.45],
                     backgroundStyle: {
                         borderWidth: 2,
@@ -1659,7 +1659,7 @@ $(function(){
                         +'<div style="width:100%;height:40px;line-height:40px;padding:0 20px">'
                         +'<span style="color:#fff;font-size:16px;">'+params.data.company+'</span>'+'</div>'
                         +'<div style="padding-left:20px">'
-                        +'<ul><li style="float:left;widt:65px;height:20px;line-height:20px;background:#00d9e4;border-radius:4px;color:#fff;margin-right:5px">购买客户</li><li style="float:left;widt:65px;height:20px;line-height:20px;background:#cfbb17;border-radius:4px;color:#fff;">销售客户</li></ul>'
+                        +'<ul><li style="float:left;display:inline-block;widt:80px;height:20px;line-height:20px;padding:0 5px;background:#00d9e4;border-radius:4px;color:#fff;margin-right:5px;text-align:center">购买客户</li><li style="float:left;display:inline-block;padding:0 5px;widt:80px;height:20px;line-height:20px;background:#cfbb17;border-radius:4px;color:#fff;;text-align:center">销售客户</li></ul>'
                         +'</div>'
                         +'<div style="padding:20px">'
                         +'<p style="color:#00f0ff;font-size:12px;">'
@@ -1675,7 +1675,7 @@ $(function(){
                 visualMap: {
                     min: 0,
                     max: 1000,
-                    left:100,
+                    left:"25%",
                     bottom:80,
                     padding: [0, 5],
                     showLabel: !0,
@@ -1716,26 +1716,31 @@ $(function(){
                         min: 1,
                         max: 2
                     },
-                    zoom: 1.23,
-                    top: 120,
+                    zoom: 1.22,
+                    top: 85,
                     label: {
                         normal: {
                             show:true,
                             fontSize: "16",
-                            color: "rgba(200,200,200,0.7)"
+                            color: "rgba(255,255,255,1)"
                         }
                     },
                     itemStyle: {
                         normal: {
                             //shadowBlur: 50,
                             //shadowColor: 'rgba(0, 0, 0, 0.2)',
-                            borderColor: "rgba(200, 200, 200, 0.2)"
+                            borderColor: "rgba(255, 255, 255, 1)"
                         },
                         emphasis: {
-                            areaColor: "#096ba3",
+                            areaColor: "#fff",
+                            color:"#fff",
+                            itemStyle:{
+                               
+                               
+                            },
                             shadowOffsetX: 0,
-                            shadowOffsetY: 0,
-                            borderWidth: 0
+                                shadowOffsetY: 0,
+                                borderWidth: 0
                         }
                     }
                 },
@@ -1761,7 +1766,7 @@ $(function(){
                             position: 'right',
                             formatter: '{b}',
                             textStyle:{
-                                color: '#a6dff0',
+                                color: '#fff',
                                 fontSize:12
                             }
                         },
@@ -1776,7 +1781,7 @@ $(function(){
                     itemStyle: {
                         normal: {
                             show:false,
-                            color: '#a6dff0'
+                            color: '#fff'
                         }
                     },
                     data: allData.citys
@@ -1858,6 +1863,17 @@ $(function(){
     //更多下拉
     $(".more").on("click",function(){
         $(".slide").slideToggle(200);
+    })
+    //弹窗
+    $(".headright li a").on("click",function(){
+        if($(this).find(".redicon").length>0){
+            $(".allbg").show()
+            $(".headrdia").show(200)
+        }
+    })
+    $(".colsedia").on("click",function(){
+        $(".allbg").hide()
+        $(this).parents(".headrdia").hide(200)
     })
     
 })
